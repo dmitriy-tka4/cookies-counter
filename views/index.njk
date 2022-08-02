@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Cookies counter</h1>
+
+  {% if counter %}
+  <p>Количество посещений: {{ counter }}</p>
+  {% else %}
+  <p>Cookies не найдены, вы первый раз на сайте</p>
+  {% endif %}
+
+  {% if counter > 3 and counter < 7 %}
+  <p>Ух ты, давай ещё ;)</p>
+  {% elif counter > 10 and counter < 15 %}
+  <p>А добить до 100 слабо? :)</p>
+  {% endif %}
+
+</body>
+</html>
